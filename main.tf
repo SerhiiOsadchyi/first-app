@@ -87,7 +87,7 @@ resource "aws_security_group" "myapp-sg" {
 
 # Get the most recent AMI for the instance
 data "aws_ami" "latest-amazon-linux-image" {
-    most_recent      = true
+    most_recent = true
     owners = ["amazon"]
 
     filter {
@@ -103,7 +103,7 @@ data "aws_ami" "latest-amazon-linux-image" {
 
 # Get public key
 resource "aws_key_pair" "ssh-key" {
-    key_name   = "server-key"
+    key_name = "server-key"
     public_key = file(var.publc_key_location)
 }
 
