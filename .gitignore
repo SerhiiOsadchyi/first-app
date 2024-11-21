@@ -7,3 +7,6 @@
 # tf state files
 *.tfstate
 *.tfstate.*
+
+# aws installed files
+aws
