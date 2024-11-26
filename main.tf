@@ -1,3 +1,14 @@
+# Share and backup TF state versions
+terraform {
+    required_version = ">= 0.12"
+
+    backend "s3" {
+        bucket = "myapp-demo-bucket"
+        key = "myapp/state.tfstate"
+        region = "eu-west-3"
+    }  
+}
+
 # Configure the AWS Provider
 provider "aws" {
     region = "eu-west-3"
